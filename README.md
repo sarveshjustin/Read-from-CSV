@@ -15,16 +15,16 @@ Step 5:Print the output.
 
 ## PROGRAM:
 ```
-import csv
-with open('employee_file.csv',mode='w') as employee_file:
-  employee_writer = csv.writer(employee_file,delimiter=',',quotechar='"',quoting=csv.QUOTE_MINIMAL)
-  employee_writer.writerow(['John Smith','Accounting','November'])
-  employee_writer.writerow(['Erica Meyers','IT','March'])
-
-  ```
+import pandas as pd
+df = pd.read_csv('nba.csv')
+print(df.head(10))
+print(df.tail())
+print("rows",len(df.axes[0]))
+print("columns",len(df.axes[1]))
+```
 
 ## OUTPUT:
-![ouput](./nba.png.png)
+![ouput](./png.png)
 
 ## RESULT:
 Thus a python program is written to read the contents of a CSV file.
